@@ -67,7 +67,7 @@ h\left( X \right) = \ln {\tfrac{\pi}{4}}
 ## Usage
 
 ```javascript
-import entropy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-entropy@deno/mod.js';
+import entropy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-entropy@v0.1.0-deno/mod.js';
 ```
 
 #### entropy( a, b )
@@ -128,7 +128,7 @@ y = entropy( 3.0, 3.0 );
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
 import EPS from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-eps@deno/mod.js';
-import entropy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-entropy@deno/mod.js';
+import entropy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-entropy@v0.1.0-deno/mod.js';
 
 var a;
 var b;
