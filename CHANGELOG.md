@@ -2,6 +2,63 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2024-12-14)
+
+<section class="features">
+
+### Features
+
+-   [`222ef72`](https://github.com/stdlib-js/stdlib/commit/222ef725730746806fa15ac1d735f0284cf4616e) - add C implementation for `stats/base/dists/arcsine/entropy` [(#3379)](https://github.com/stdlib-js/stdlib/pull/3379)
+
+</section>
+
+<!-- /.features -->
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#3378](https://github.com/stdlib-js/stdlib/issues/3378)
+
+</section>
+
+<!-- /.issues -->
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`222ef72`](https://github.com/stdlib-js/stdlib/commit/222ef725730746806fa15ac1d735f0284cf4616e) - **feat:** add C implementation for `stats/base/dists/arcsine/entropy` [(#3379)](https://github.com/stdlib-js/stdlib/pull/3379) _(by Aayush Khanna, Philipp Burckhardt)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 2 people contributed to this release. Thank you to the following contributors:
+
+-   Aayush Khanna
+-   Philipp Burckhardt
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.2.2">
 
 ## 0.2.2 (2024-07-27)
