@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-01-12)
+## Unreleased (2025-01-14)
 
 <section class="features">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`727d50a`](https://github.com/stdlib-js/stdlib/commit/727d50a761a91df5259078eed98b8a4f9b2e4c52) - **bench:** refactor random number generation in `stats/base/dists/arcsine` [(#4744)](https://github.com/stdlib-js/stdlib/pull/4744) _(by Karan Anand)_
 -   [`97c434d`](https://github.com/stdlib-js/stdlib/commit/97c434de1ac819d4f616202b10ebdce3970a76d8) - **chore:** directly draw from the desired distribution instead of adding constants _(by Philipp Burckhardt)_
 -   [`8bf8285`](https://github.com/stdlib-js/stdlib/commit/8bf8285aba0ecbd00ae145c4c5c098cd28135814) - **chore:** minor clean-up _(by Philipp Burckhardt)_
 -   [`222ef72`](https://github.com/stdlib-js/stdlib/commit/222ef725730746806fa15ac1d735f0284cf4616e) - **feat:** add C implementation for `stats/base/dists/arcsine/entropy` [(#3379)](https://github.com/stdlib-js/stdlib/pull/3379) _(by Aayush Khanna, Philipp Burckhardt)_
@@ -48,9 +49,10 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Aayush Khanna
+-   Karan Anand
 -   Philipp Burckhardt
 
 </section>
