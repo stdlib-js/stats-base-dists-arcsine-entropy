@@ -60,19 +60,32 @@ h\left( X \right) = \ln {\tfrac{\pi}{4}}
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-arcsine-entropy
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import entropy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-entropy@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-base-dists-arcsine-entropy/tags). For example,
-
-```javascript
-import entropy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-entropy@v0.3.0-esm/index.mjs';
+var entropy = require( '@stdlib/stats-base-dists-arcsine-entropy' );
 ```
 
 #### entropy( a, b )
@@ -130,15 +143,10 @@ y = entropy( 3.0, 3.0 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@esm/index.mjs';
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
-import entropy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-entropy@esm/index.mjs';
+```javascript
+var uniform = require( '@stdlib/random-array-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var entropy = require( '@stdlib/stats-base-dists-arcsine-entropy' );
 
 var opts = {
     'dtype': 'float64'
@@ -147,10 +155,6 @@ var a = uniform( 25, 0.0, 10.0, opts );
 var b = uniform( a.length, 15.0, 25.0, opts );
 
 logEachMap( 'a: %0.4f, b: %0.4f, h(X;a,b): %0.4f', a, b, entropy );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -159,7 +163,98 @@ logEachMap( 'a: %0.4f, b: %0.4f, h(X;a,b): %0.4f', a, b, entropy );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/stats/base/dists/arcsine/entropy.h"
+```
+
+#### stdlib_base_dists_arcsine_entropy( a, b )
+
+Returns the differential entropy of an arcsine distribution.
+
+```c
+double out = stdlib_base_dists_arcsine_entropy( -4.0, 4.0 );
+// returns ~1.838
+```
+
+The function accepts the following arguments:
+
+-   **a**: `[in] double` minimum support.
+-   **b**: `[in] double` maximum support.
+
+```c
+double stdlib_base_dists_arcsine_entropy( const double a, const double b );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/stats/base/dists/arcsine/entropy.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+static double random_uniform( const double min, const double max ) {
+    double v = (double)rand() / ( (double)RAND_MAX + 1.0 );
+    return min + ( v*(max-min) );
+}
+
+int main( void ) {
+    double a;
+    double b;
+    double y;
+    int i;
+
+    for ( i = 0; i < 25; i++ ) {
+        a = random_uniform( 0.0, 20.0 );
+        b = random_uniform( a, a+20.0 );
+        y = stdlib_base_dists_arcsine_entropy( a, b );
+        printf( "x: %lf, a: %lf, b: %lf, h(X;a,b): %lf\n", a, b, y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -186,7 +281,7 @@ logEachMap( 'a: %0.4f, b: %0.4f, h(X;a,b): %0.4f', a, b, entropy );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -216,8 +311,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/stats-base-dists-arcsine-entropy.svg
 [npm-url]: https://npmjs.org/package/@stdlib/stats-base-dists-arcsine-entropy
 
-[test-image]: https://github.com/stdlib-js/stats-base-dists-arcsine-entropy/actions/workflows/test.yml/badge.svg?branch=v0.3.0
-[test-url]: https://github.com/stdlib-js/stats-base-dists-arcsine-entropy/actions/workflows/test.yml?query=branch:v0.3.0
+[test-image]: https://github.com/stdlib-js/stats-base-dists-arcsine-entropy/actions/workflows/test.yml/badge.svg?branch=v0.3.1
+[test-url]: https://github.com/stdlib-js/stats-base-dists-arcsine-entropy/actions/workflows/test.yml?query=branch:v0.3.1
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/stats-base-dists-arcsine-entropy/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/stats-base-dists-arcsine-entropy?branch=main
