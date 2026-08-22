@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-07-25)
+## Unreleased (2026-08-22)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`4393fd1`](https://github.com/stdlib-js/stdlib/commit/4393fd1a32d4bc0e0ad22b2c3e5e9b8a122f5940) - **test:** migrate `stats/base/dists/arcsine/entropy` to ULP-based assertions [(#14497)](https://github.com/stdlib-js/stdlib/pull/14497) _(by Philipp Burckhardt)_
 -   [`f38e8a7`](https://github.com/stdlib-js/stdlib/commit/f38e8a7b433e0e9888eb57c83f4374073089ad85) - **docs:** clean-up parameters in Julia fixtures scripts _(by Philipp Burckhardt)_
 
 </details>
